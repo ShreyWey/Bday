@@ -1,0 +1,257 @@
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffd9ec;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#5dff4e91;
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5ef52c;
+}
+
+#envelope {
+    position: relative;
+    width: 840px;
+    height: 540px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 450px;
+    background-color: #e381ad;
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.2);
+}
+.front {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 3;
+}
+.flap {
+    border-left: 420px solid transparent;
+    border-right: 420px solid transparent;
+    border-bottom: 246px solid transparent;
+    border-top: 294px solid #e381ad;
+    transform-origin: top;
+}
+.pocket {
+    border-left: 420px solid #ffa1e0;
+    border-right: 420px solid #ffa1e0;
+    border-bottom: 270px solid #ff8bc7;
+    border-top: 270px solid transparent;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.letter {
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 95%;
+    top: 5%;
+    border-radius: 6px;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
+    background-image: url("https://static.vecteezy.com/system/resources/previews/001/984/340/original/3d-origami-hot-air-balloon-heart-flying-with-cloud-on-sky-background-love-concept-design-for-happy-mother-s-day-valentine-s-day-birthday-day-paper-art-illustration-free-vector.jpg");
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.letter:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background-image: linear-gr  adient(180deg, rgba(255, 255, 255, 0.00) 25%, rgba(215, 227, 239, 0.70) 55%, rgba(215, 227, 239, 1.00) 100%); */
+}
+.words {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 14%;
+}
+.words.line1 {
+    top: 10%;
+    width: 20%;
+    height: 7%;
+    font-family: cursive;
+
+}
+.words.line2 {
+    top: 15%;
+    font-family: cursive;
+}   
+.open .flap {
+    transform: rotatex(180deg);
+    transition: transform 0.4s ease, z-index 0.6s;
+    z-index: 1;
+}
+.close .flap {
+    transform: rotatex(0deg);
+    transition: transform 0.4s 0.6s ease, z-index 1s;
+    z-index: 5;
+}
+.close .letter {
+    transform: translatey(0px);
+    transition: transform 0.4s ease, z-index 1s;
+    z-index: 1;
+}
+.open .letter {
+    transform: translatey(-440px);
+    transition: transform 0.4s 0.6s ease, z-index 0.6s;
+    z-index: 2;
+}
+.hearts {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.heart {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.heart:before, .heart:after {
+    position: absolute;
+    content: '';
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: rgba(255, 75, 135);
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+.close .heart {
+    opacity: 0;
+    animation: none;
+}
+.a1 {
+    left: 20%;
+    transform: scale(0.6);
+    opacity: 1;
+    animation: slideUp 6s linear 1, sideSway 2s  ease-in-out 10 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+.a2 {
+    left: 55%;
+    transform: scale(1);
+    opacity: 1;
+    animation: slideUp 5s linear 1, sideSway 4s  ease-in-out 10 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+.a3 {
+    left: 10%;
+    transform: scale(0.8);
+    opacity: 1;
+    animation: slideUp 7s linear 1, sideSway 2s  ease-in-out 10 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+.a4 {
+    left: 80%;
+    transform: scale(1.1);
+    opacity: 1;
+    animation: slideUp 8s linear 1, sideSway 3s  ease-in-out 10 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+.a5 {
+    left: 30%;
+    top: 10%;
+    transform: scale(.6);
+    opacity: 1;
+    animation: slideUp 7s linear 1, sideSway 3s  ease-in-out 10 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+.a6 {
+    left: 70%;
+    transform: scale(.65);
+    opacity: 1;
+    animation: slideUp 6s linear 1, sideSway 3s  ease-in-out 10 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+.a7 {
+    left: 10%;
+    transform: scale(.5);
+    opacity: 1;
+    animation: slideUp 6s linear 1, sideSway 3s  ease-in-out 10 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+@keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -1000px;
+    }
+}
+@keyframes sideSway {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 50px;
+    }
+}
+body {
+    background-color:  #ffd9ec;
+}
+.envelope-wrapper {
+    height: 380px;
+}
+.reset {
+    text-align: center;
+}
+.reset button {
+    font-weight: 800;
+    font-style: normal;
+    transition: all 0.1s linear;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: solid 2px #39b42999;
+    border-radius: 4px;
+    color: #39b42999;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 5px;
+    padding: 10px;
+    line-height: 1em;
+    text-decoration:  none;
+    min-width: 120px;
+    outline: none;
+    margin-right: 70%;
+}
+.reset button:hover {
+    background-color: #39b42999;
+    color: #fff;
+}
+
+.clickMe {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 800;
+}
+
