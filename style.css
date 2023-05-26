@@ -262,12 +262,17 @@ a:hover {
 }
 
 /*---------------CODE FOR GALLERY-------------*/
-#collage {
-    height: 100rem;
-}
-.images {
+
+img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+h1 {
+    color: #39b42999;
+    text-align: center;
+    font-family: cursive;
+    font-size: 2rem;
 }
